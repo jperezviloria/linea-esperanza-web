@@ -14,9 +14,9 @@ const toolbar = props => (
         <div className="toolbar_navigation-items">
             <ul>
                 <li><a href="/">INICIO</a></li>
-                <li><a href="/">PSICOLOGOS</a></li>
-                <li><a href="/">SOBRE NOSOTROS</a></li>
-                <li><a href="/">CONTÁCTANOS</a></li>
+                <li><a href="/psicologos">PSICOLOGOS</a></li>
+                <li><a href="/nosotros">SOBRE NOSOTROS</a></li>
+                <li><a href="/contacto">CONTÁCTANOS</a></li>
             </ul>
         </div>
     </nav>
