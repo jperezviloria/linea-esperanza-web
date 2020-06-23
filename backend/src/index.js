@@ -1,22 +1,15 @@
-require('dotenv').config();
-
+require("dotenv").config();
 
 const app = require("./app");
-require("./database"); 
+require("./database");
 
+async function main() {
+  if (process.env.NODE_ENV === "production") {
+    app.use(express.static("frontend/build"));
+  }
 
-async function main () {
-    
-    // app.get("*", (req, res) => {
-    //     res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
-    // });
-
-    if(process.env.NODE_ENV === 'production'){
-        app.use(express.static("frontend/build"))
-    }
-
-    await app.listen(app.get("port"));
-    console.log("Server on the port", app.get("port"));
+  await app.listen(app.get("port"));
+  console.log("Server on the port", app.get("port"));
 }
 
 main();

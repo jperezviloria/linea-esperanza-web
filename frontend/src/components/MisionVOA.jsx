@@ -18,7 +18,7 @@ function MVOA(){
             <p className = "descripcion">- Sensibilizar a la iglesia cristiana en Iberoamérica sobre la importancia del cuidado de la salud mental.</p>
             </MVOARecuadro>
             <MVOARecuadro><p className = "subtitulo">ALCANCE</p>
-            <p className = "descripcion">Todos aquellos que necesiten orientación y apoyo emocional por parte de los profesionales de la Salud Mental de la Iglesia Cristiana en Iberoamérica, podrán accesar a la Línea de la Esperanza.</p></MVOARecuadro>
+            <p className = "descripcion">Todos aquellos que necesiten orientación y apoyo emocional por parte de los profesionales de la Salud Mental de la Iglesia Cristiana en Iberoamérica, podrán accesar a la Línea Esperanza.</p></MVOARecuadro>
         </MVOABase>
         <BotonParaFormulario enlace = "/formulario"  boton = "SOLICITA ATENCIÓN PSICOLÓGICA"></BotonParaFormulario>
         </div>

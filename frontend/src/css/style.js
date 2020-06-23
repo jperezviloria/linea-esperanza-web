@@ -689,6 +689,11 @@ export const FormularioTabla = styled.form`
   border-bottom-right-radius: 15px;
   padding-bottom: 5px;
 
+  a{
+    display: grid;
+    justify-content: center;
+  }
+
   h2 {
     font-size: 16px;
     text-align: center;
@@ -1075,6 +1080,7 @@ export const MVOARecuadro = styled.div`
       font-weight: 500;
       font-size: 16px;
       text-align: justify;
+      
     }
   }
 

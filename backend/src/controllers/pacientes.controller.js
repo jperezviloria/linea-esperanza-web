@@ -16,7 +16,9 @@ pacientesCtrl.createPacientes = async (req, res) => {
     sexo,
     edad,
     email,
+    codigoCelular,
     telefonoCelular,
+    codigoFijo,
     telefonoFijo,
     pais,
     ciudad,
@@ -32,7 +34,9 @@ pacientesCtrl.createPacientes = async (req, res) => {
     sexo,
     edad,
     email,
+    codigoCelular,
     telefonoCelular,
+    codigoFijo,
     telefonoFijo,
     pais,
     ciudad,
@@ -60,7 +64,9 @@ pacientesCtrl.updatePaciente = async (req, res) => {
     sexo,
     edad,
     email,
+    codigoCelular,
     telefonoCelular,
+    codigoFijo,
     telefonoFijo,
     pais,
     ciudad,
@@ -76,7 +82,9 @@ pacientesCtrl.updatePaciente = async (req, res) => {
     sexo,
     edad,
     email,
+    codigoCelular,
     telefonoCelular,
+    codigoFijo,
     telefonoFijo,
     pais,
     ciudad,
@@ -101,7 +109,9 @@ pacientesCtrl.sendMail = async (req, res) => {
     sexo,
     edad,
     email,
+    codigoCelular,
     telefonoCelular,
+    codigoFijo,
     telefonoFijo,
     pais,
     ciudad,
@@ -122,8 +132,8 @@ pacientesCtrl.sendMail = async (req, res) => {
         <li>Sexo : ${sexo}</li><br>
         <li>Edad : ${edad}</li><br>
         <li>Email : ${email}</li><br>
-        <li>Telefono Celular : ${telefonoCelular}</li><br>
-        <li>Telefono Fijo : ${telefonoFijo}</li><br>
+        <li>Telefono Celular : ${codigoCelular}-${telefonoCelular}</li><br>
+        <li>Telefono Fijo : ${codigoFijo}-${telefonoFijo}</li><br>
         <li>País : ${pais}</li><br>
         <li>Ciudad : ${ciudad}</li><br>
         <li>Forma de contacto : ${formaContacto}</li><br>
@@ -150,11 +160,11 @@ pacientesCtrl.sendMail = async (req, res) => {
     `;
 
   const transporter = nodemailer.createTransport({
-    host: "HOST",
-    port: "PORT",
+    host: "SERVICIO",
+    port: "PUERTO",
     auth: {
-      user: "USERMAIL", // generated ethereal user
-      pass: "PASSWORD", // generated ethereal password
+      user: "USUARIO", // generated ethereal user
+      pass: "CONTRASENIA", // generated ethereal password
     },
     tls: {
       rejectUnauthorized: false,
@@ -162,8 +172,8 @@ pacientesCtrl.sendMail = async (req, res) => {
   });
 
   let mailOptions = {
-    from: "DESDEMAIL",
-    to: "HASTAMAIL",
+    from: "DESDEMAILER",
+    to: "HASTAMAILER",
     subject: "Formulario de paciente - Linea de la Esperanza",
     html: contentHTML,
   };

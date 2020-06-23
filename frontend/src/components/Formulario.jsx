@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Paises from "./Paises";
+import Envio from "./Button";
 
 import {
   FormularioBase,
@@ -20,12 +21,11 @@ export default class mail extends Component {
   };
 
   getPacientes = async () => {
-    const res = await axios.get("http://198.12.249.206:7000/formulario");
+    const res = await axios.get("http://IP:PUERTO/formulario");
     this.setState({ users: res.data });
   };
 
   async componentDidMount() {
-    // const res = await axios.get("http://localhost:4000/api/notes");
     this.getPacientes();
     console.log(this.state.users);
   }
@@ -60,9 +60,21 @@ export default class mail extends Component {
     });
   };
 
+  onChangeCodigoCelular = (e) => {
+    this.setState({
+      codigoCelular: e.target.value,
+    });
+  };
+
   onChangeTelefonoCelular = (e) => {
     this.setState({
       telefonoCelular: e.target.value,
+    });
+  };
+
+  onChangeCodigoFijo = (e) => {
+    this.setState({
+      codigoFijo: e.target.value,
     });
   };
 
@@ -117,13 +129,15 @@ export default class mail extends Component {
   onSubmitPacientes = async (e) => {
     e.preventDefault();
 
-    const res = await axios.post("http://198.12.246.206:7000/formulario/mail", {
+    const res = await axios.post("http://IP:PUERTO/formulario/mail", {
       nombre: this.state.nombre,
       apellido: this.state.apellido,
       sexo: this.state.sexo,
       edad: this.state.edad,
       email: this.state.email,
+      codigoCelular: this.state.codigoCelular,
       telefonoCelular: this.state.telefonoCelular,
+      codigoFijo: this.state.codigoFijo,
       telefonoFijo: this.state.telefonoFijo,
       pais: this.state.pais,
       ciudad: this.state.ciudad,
@@ -133,7 +147,24 @@ export default class mail extends Component {
       habitosPersonales: this.state.habitosPersonales,
       comentarioAdicional: this.state.comentarioAdicional,
     });
-
+    this.setState({
+      nombre: "",
+      apellido: "",
+      sexo: "",
+      edad: "",
+      email: "",
+      codigoCelular: "",
+      telefonoCelular: "",
+      codigoFijo: "",
+      telefonoFijo: "",
+      pais: "",
+      ciudad: "",
+      formaContacto: "",
+      motivoConsulta: "",
+      descripcionEmocional: "",
+      habitosPersonales: "",
+      comentarioAdicional: "",
+    });
     this.getPacientes();
   };
 
@@ -149,6 +180,7 @@ export default class mail extends Component {
                 type="text"
                 placeholder="Nombre"
                 autoComplete="none"
+                value={this.state.nombre}
                 onChange={this.onChangeNombre}
               />
             </div>
@@ -157,13 +189,17 @@ export default class mail extends Component {
                 type="text"
                 autoComplete="none"
                 placeholder="Apellido"
+                value={this.state.apellido}
                 onChange={this.onChangeApellido}
               />
             </div>
             <EspacioCompartido className="SexoEdad">
               <div>
                 {/* <Inputs type="text" autoComplete="none" placeholder="Sexo" onChange = {this.onChangeSexo}/> */}
-                <OpcionesFormulario className="opcionesSexo">
+                <OpcionesFormulario
+                  className="opcionesSexo"
+                  value={this.state.sexo}
+                >
                   <option value="Sexo" id="AF">
                     Sexo
                   </option>
@@ -181,6 +217,7 @@ export default class mail extends Component {
                   type="tel"
                   autoComplete="none"
                   placeholder="Edad"
+                  value={this.state.edad}
                   onChange={this.onChangeEdad}
                 />
               </div>
@@ -190,6 +227,7 @@ export default class mail extends Component {
                 type="email"
                 autoComplete="none"
                 placeholder="Email"
+                value={this.state.email}
                 onChange={this.onChangeEmail}
               />
             </div>
@@ -202,7 +240,8 @@ export default class mail extends Component {
                   type="tel"
                   autoComplete="none"
                   placeholder="Cod. Area"
-                  onChange={this.onChangeTelefonoCelular}
+                  value={this.state.codigoCelular}
+                  onChange={this.onChangeCodigoCelular}
                 />
               </div>
               <div>
@@ -211,6 +250,7 @@ export default class mail extends Component {
                   type="tel"
                   autoComplete="none"
                   placeholder="Teléfono Celular"
+                  value={this.state.telefonoCelular}
                   onChange={this.onChangeTelefonoCelular}
                 />
               </div>
@@ -222,7 +262,8 @@ export default class mail extends Component {
                   type="tel"
                   autoComplete="none"
                   placeholder="Cod. Area"
-                  onChange={this.onChangeTelefonoFijo}
+                  value={this.state.codigoFijo}
+                  onChange={this.onChangeCodigoFijo}
                 />
               </div>
               <div>
@@ -231,26 +272,31 @@ export default class mail extends Component {
                   type="tel"
                   autoComplete="none"
                   placeholder="Teléfono Fijo"
+                  value={this.state.telefonoFijo}
                   onChange={this.onChangeTelefonoFijo}
                 />
               </div>
             </EspacioCompartido>
 
             <div>
-              <Paises />
+              <Paises value={this.state.pais} />
             </div>
             <div>
               <Inputs
                 type="text"
                 autoComplete="none"
                 placeholder="Ciudad"
+                value={this.state.ciudad}
                 onChange={this.onChangeCiudad}
               />
             </div>
           </FormularioAtributos>
           <div>
             <h2>¿De qué forma quiere ser contactado?</h2>
-            <FormularioOpciones onChange={this.onChangeFormaContacto}>
+            <FormularioOpciones
+              value={this.state.formaContacto}
+              onChange={this.onChangeFormaContacto}
+            >
               <option value="Sin seleccionar">Preferencia</option>
               <option value="Video conferencia">Video conferencia</option>
               <option value="Presencialmente">Presencialmente</option>
@@ -265,6 +311,7 @@ export default class mail extends Component {
               type="text"
               autoComplete="none"
               placeholder="Motivo de consulta"
+              value={this.state.motivoConsulta}
               onChange={this.onChangeMotivoConsulta}
             />
           </div>
@@ -275,6 +322,7 @@ export default class mail extends Component {
               type="text"
               autoComplete="none"
               placeholder="Cuéntanos"
+              value={this.state.descripcionEmocional}
               onChange={this.onChangeDescripcionEmocional}
             />
           </div>
@@ -288,6 +336,7 @@ export default class mail extends Component {
               type="text"
               autoComplete="none"
               placeholder="Ejemplo: Alimentacion, Concentracion, Aseo personal, Vitalidad"
+              value={this.state.habitosPersonales}
               onChange={this.onChangeHabitosPersonales}
             />
           </div>
@@ -298,11 +347,13 @@ export default class mail extends Component {
               type="text"
               autoComplete="none"
               placeholder="Cuéntanos"
+              value={this.state.comentarioAdicional}
               onChange={this.onChangeComentarioAdicional}
             />
           </div>
           <a>
-            <FormularioEnviar type="submit">ENVIAR FORMULARIO</FormularioEnviar>
+            <Envio />
+            {/* <FormularioEnviar type="submit">ENVIAR FORMULARIO</FormularioEnviar> */}
           </a>
         </FormularioTabla>
       </FormularioBase>

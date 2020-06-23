@@ -14,7 +14,7 @@ function Psicologos(){
         <PsicologosMostrarBase>
             {DatosEquipo.map(Tarjeta)}
         </PsicologosMostrarBase>
-        <BotonParaFormulario enlace = "/formulario"  boton = "SOLICITA ATENCIÓN PSICOLÓGICA"></BotonParaFormulario>
+        <BotonParaFormulario enlace = "/formulario"  boton = "SOLICITA ATENCIÓN PSICOLÓGICA Y CONFIDENCIAL"></BotonParaFormulario>
         
         </div>
     )
