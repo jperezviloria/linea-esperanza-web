@@ -24,7 +24,7 @@ const DatosEquipoTarjeta = [
     rolEquipo: "Psicóloga",
   },
   {
-    nombreEquipo: "Octavio Guerra",
+    nombreEquipo: "Obtavio Guerra",
     perfilEquipo: "https://i.imgur.com/qFCTnpY.jpg",
     ubicacionEquipo: "Venezuela",
     banderaEquipo:

@@ -26,13 +26,13 @@ function MensajeContacto(){
                 <img src="https://i.imgur.com/XBXbiS1.png" alt=""/> 
                 <div className = "numero">
                 <p className="informacion">+58 412-3545565 </p>
-                <a href= "https://wa.me/584123545565?text=Vengo%20por%20parte%20de%20la%20Linea%20esperanza%20!">
+                <a href= "https://wa.me/584123545565?text=Vengo%20de%20parte%20de%20la%20Linea%20Esperanza%20!">
                 <button type= "submit">ESCRIBE POR WHATSAPP</button>
                 </a>
                 </div>
                 <div className = "numero">
                 <p className="informacion">+58 414-8911483 </p>
-                <a href= "https://wa.me/584148911483?text=Vengo%20por%20parte%20de%20la%20Linea%20esperanza%20!">
+                <a href= "https://wa.me/584148911483?text=Vengo%20de%20parte%20de%20la%20Linea%20Esperanza%20!">
                 <button type= "submit">ESCRIBE POR WHATSAPP</button>
                 </a>
                 </div>

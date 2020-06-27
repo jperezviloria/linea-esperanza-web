@@ -9,7 +9,7 @@ function Header(){
         <HeaderBase>
             <img src= "https://fotos.subefotos.com/a04e21cd0e1096bd1b6a63d970d097abo.png" alt=""/>
             <BotonHeader link = "/"  enlace = "Inicio"></BotonHeader>
-            <BotonHeader link = "/psicologos"  enlace = "Psicólogos"></BotonHeader>
+            <BotonHeader link = "/psicologos"  enlace = "Nuestro equipo"></BotonHeader>
             <BotonHeader link = "/nosotros"  enlace = "Sobre nosotros"></BotonHeader>
             <BotonHeader link = "/contacto"  enlace = "Contá"></BotonHeader>
             

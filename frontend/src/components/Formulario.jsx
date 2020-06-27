@@ -21,7 +21,7 @@ export default class mail extends Component {
   };
 
   getPacientes = async () => {
-    const res = await axios.get("http://IP:PUERTO/formulario");
+    const res = await axios.get("http://198.12.249.206:7000/formulario");
     this.setState({ users: res.data });
   };
 
@@ -129,7 +129,7 @@ export default class mail extends Component {
   onSubmitPacientes = async (e) => {
     e.preventDefault();
 
-    const res = await axios.post("http://IP:PUERTO/formulario/mail", {
+    const res = await axios.post("http://198.12.249.206:7000/formulario/mail", {
       nombre: this.state.nombre,
       apellido: this.state.apellido,
       sexo: this.state.sexo,
@@ -335,7 +335,7 @@ export default class mail extends Component {
               className="contar"
               type="text"
               autoComplete="none"
-              placeholder="Ejemplo: Alimentacion, Concentracion, Aseo personal, Vitalidad"
+              placeholder="Ejemplo: Alimentación, Concentración, Aseo personal, Vitalidad"
               value={this.state.habitosPersonales}
               onChange={this.onChangeHabitosPersonales}
             />

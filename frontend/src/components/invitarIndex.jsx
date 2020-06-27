@@ -10,9 +10,9 @@ function Invitacion(){
     return (
         <InvitacionFondoIndex>
         <InvitarTarjeta
-        eslogan = "Psicólogos"
+        eslogan = "Nuestro equipo"
         imagen="https://i.imgur.com/G4Ru3im.png"
-        boton = "VER PSICÓLOGOS"
+        boton = "VER EQUIPO"
         enlace = "/psicologos">
         </InvitarTarjeta>
         <InvitarTarjeta
