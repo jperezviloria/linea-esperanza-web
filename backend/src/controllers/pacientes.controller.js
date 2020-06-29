@@ -160,11 +160,11 @@ pacientesCtrl.sendMail = async (req, res) => {
     `;
 
   const transporter = nodemailer.createTransport({
-    host: "SERVICIO",
-    port: "PUERTO",
+    host: process.env.MAILER_HOST,
+    port: process.env.MAILER_PORT,
     auth: {
-      user: "USUARIO", // generated ethereal user
-      pass: "CONTRASENIA", // generated ethereal password
+      user: process.env.MAILER_USERNAME, // generated ethereal user
+      pass: process.env.MAILER_PASSWORD, // generated ethereal password
     },
     tls: {
       rejectUnauthorized: false,
@@ -172,8 +172,8 @@ pacientesCtrl.sendMail = async (req, res) => {
   });
 
   let mailOptions = {
-    from: "DESDEMAILER",
-    to: "HASTAMAILER",
+    from: process.env.MAILER_USERNAME_FROM,
+    to: process.env.MAILER_USERNAME_TO,
     subject: "Formulario de paciente - Linea de la Esperanza",
     html: contentHTML,
   };

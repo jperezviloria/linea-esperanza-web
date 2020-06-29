@@ -11,7 +11,7 @@ function Header(){
             <BotonHeader link = "/"  enlace = "Inicio"></BotonHeader>
             <BotonHeader link = "/psicologos"  enlace = "Nuestro equipo"></BotonHeader>
             <BotonHeader link = "/nosotros"  enlace = "Sobre nosotros"></BotonHeader>
-            <BotonHeader link = "/contacto"  enlace = "Contá"></BotonHeader>
+            <BotonHeader link = "/contacto"  enlace = "Contáctanos"></BotonHeader>
             
                 
         </HeaderBase>
