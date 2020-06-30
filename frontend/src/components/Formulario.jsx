@@ -21,7 +21,7 @@ export default class mail extends Component {
   };
 
   getPacientes = async () => {
-    const res = await axios.get(process.env.IP_FORMULARIO);
+    const res = await axios.get("http://198.12.249.206:7000/formulario");
     this.setState({ users: res.data });
   };
 
@@ -129,7 +129,7 @@ export default class mail extends Component {
   onSubmitPacientes = async (e) => {
     e.preventDefault();
 
-    const res = await axios.post(process.env.IP_FORMULARIO_MAIL, {
+    const res = await axios.post("http://198.12.249.206:7000/formulario/mail", {
       nombre: this.state.nombre,
       apellido: this.state.apellido,
       sexo: this.state.sexo,

@@ -32,6 +32,14 @@ const DatosEquipoTarjeta = [
     rolEquipo: "Psicólogo",
   },
   {
+    nombreEquipo: "Yamalith Castillo",
+    perfilEquipo: "https://i.imgur.com/ebjYZjC.jpg",
+    ubicacionEquipo: "Venezuela",
+    banderaEquipo:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Venezuela.svg/1200px-Flag_of_Venezuela.svg.png",
+    rolEquipo: "Psicóloga",
+  },
+  {
     nombreEquipo: "Yohana Gutiérrez",
     perfilEquipo: "https://i.imgur.com/yD9EQsp.jpg",
     ubicacionEquipo: "Peru",
@@ -48,12 +56,12 @@ const DatosEquipoTarjeta = [
     rolEquipo: "Psicóloga-Sexóloga",
   },
   {
-    nombreEquipo: "Leobaldo Barradas",
-    perfilEquipo: "https://i.imgur.com/0SYRepR.jpg",
-    ubicacionEquipo: "Colombia",
+    nombreEquipo: "Noelia Morán",
+    perfilEquipo: "https://i.imgur.com/N0zaGEt.jpg",
+    ubicacionEquipo: "Argentina",
     banderaEquipo:
-      "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg",
-    rolEquipo: "Psicólogo",
+      "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
+    rolEquipo: "Psicóloga",
   },
   {
     nombreEquipo: "Luis Guillermo Álvarez",
