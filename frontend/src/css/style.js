@@ -547,10 +547,10 @@ export const TarjetaPresentacion = styled.div`
 
     p {
       &.nombre {
-        font-size: 20px;
+        font-size: 19px;
       }
       &.rol {
-        font-size: 22px;
+        font-size: 20px;
       }
     }
 
