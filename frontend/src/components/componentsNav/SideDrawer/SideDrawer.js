@@ -17,7 +17,7 @@ const sideDrawer = props => {
           <a href="/formulario">Envía el formulario</a>
         </li>
         <li>
-          <a href="/psicologos">Nuestro equipo</a>
+          <a href="/equipo">Nuestro equipo</a>
         </li>
         <li>
           <a href="/nosotros">Sobre nosotros</a>

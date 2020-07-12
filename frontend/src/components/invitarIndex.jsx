@@ -12,8 +12,8 @@ function Invitacion(){
         <InvitarTarjeta
         eslogan = "Nuestro equipo"
         imagen="https://i.imgur.com/G4Ru3im.png"
-        boton = "VER EQUIPO"
-        enlace = "/psicologos">
+        boton = "CONÓCENOS"
+        enlace = "/equipo">
         </InvitarTarjeta>
         <InvitarTarjeta
         eslogan = "Contactos"
