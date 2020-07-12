@@ -24,12 +24,12 @@ const DatosEquipoTarjeta = [
     rolEquipo: "Psicóloga",
   },
   {
-    nombreEquipo: "Obtavio Guerra",
-    perfilEquipo: "https://i.imgur.com/qFCTnpY.jpg",
+    nombreEquipo: "Yamileth Terán",
+    perfilEquipo: "https://i.imgur.com/3UsuxM6.jpg",
     ubicacionEquipo: "Venezuela",
     banderaEquipo:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Venezuela.svg/1200px-Flag_of_Venezuela.svg.png",
-    rolEquipo: "Psicólogo",
+    rolEquipo: "Psicóloga",
   },
   {
     nombreEquipo: "Yamalith Castillo",
@@ -38,6 +38,14 @@ const DatosEquipoTarjeta = [
     banderaEquipo:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Venezuela.svg/1200px-Flag_of_Venezuela.svg.png",
     rolEquipo: "Psicóloga",
+  },
+  {
+    nombreEquipo: "Ilen Mata",
+    perfilEquipo: "https://i.imgur.com/vjEzCU9.jpg",
+    ubicacionEquipo: "Venezuela",
+    banderaEquipo:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Venezuela.svg/1200px-Flag_of_Venezuela.svg.png",
+    rolEquipo: "Médico Familiar",
   },
   {
     nombreEquipo: "Yohana Gutiérrez",
@@ -64,6 +72,22 @@ const DatosEquipoTarjeta = [
     rolEquipo: "Psicóloga",
   },
   {
+    nombreEquipo: "Carlos Ávila",
+    perfilEquipo: "https://i.imgur.com/ZoXY1xs.jpg",
+    ubicacionEquipo: "Argentina",
+    banderaEquipo:
+      "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
+    rolEquipo: "Médico - Neurocoaching",
+  },
+  {
+    nombreEquipo: "Fanny Figarola",
+    perfilEquipo: "https://i.imgur.com/lqJiLlv.jpg",
+    ubicacionEquipo: "Uruguay",
+    banderaEquipo:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/1200px-Flag_of_Uruguay.svg.png",
+    rolEquipo: "Médico Psiquiatra",
+  },
+  {
     nombreEquipo: "Luis Guillermo Álvarez",
     perfilEquipo: "https://i.imgur.com/WI8Fkne.jpg",
     ubicacionEquipo: "Colombia",
@@ -73,13 +97,30 @@ const DatosEquipoTarjeta = [
   },
 
   {
-    nombreEquipo: "Arnoldo Arana",
-    perfilEquipo: "https://i.imgur.com/ge6J83Y.jpg",
-    ubicacionEquipo: "Panamá",
+    nombreEquipo: "Madeli Santos",
+    perfilEquipo: "https://i.imgur.com/zkoazfX.jpg",
+    ubicacionEquipo: "Ecuador",
     banderaEquipo:
-      "https://www.ecured.cu/images/thumb/b/b9/Bandera_Panama.png/1200px-Bandera_Panama.png",
-    rolEquipo: "Terapeuta Gestalt",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg",
+    rolEquipo: "Psicóloga",
   },
+  {
+    nombreEquipo: "Rodrigo Moncada",
+    perfilEquipo: "https://i.imgur.com/XyVmO9r.jpg",
+    ubicacionEquipo: "Chile",
+    banderaEquipo:
+      "https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg",
+    rolEquipo: "Psicólogo",
+  },
+{
+    nombreEquipo: "Natalia Puga",
+    perfilEquipo: "https://i.imgur.com/rxeSm9U.jpg",
+    ubicacionEquipo: "España",
+    banderaEquipo:
+      "https://vexilologia.org/wp-content/uploads/2016/10/besp2.png",
+    rolEquipo: "Psicóloga",
+  }
+
 ];
 
 export default DatosEquipoTarjeta;
