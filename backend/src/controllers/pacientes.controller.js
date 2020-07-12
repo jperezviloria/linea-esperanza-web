@@ -126,45 +126,51 @@ pacientesCtrl.sendMail = async (req, res) => {
     <div style="font-family: 'Lato', sans-serif;">
     <h1>Solicitud de atención desde ${pais}</h1>
     <h2>Datos personales</h2>
-    <ul>
-        <li>Nombre : ${nombre}</li><br>
-        <li>Apellido : ${apellido}</li><br>
-        <li>Sexo : ${sexo}</li><br>
-        <li>Edad : ${edad}</li><br>
-        <li>Email : ${email}</li><br>
-        <li>Telefono Celular : ${codigoCelular}-${telefonoCelular}</li><br>
-        <li>Telefono Fijo : ${codigoFijo}-${telefonoFijo}</li><br>
-        <li>País : ${pais}</li><br>
-        <li>Ciudad : ${ciudad}</li><br>
-        <li>Forma de contacto : ${formaContacto}</li><br>
-    </ul>
-    <h2>Respuestas de preguntas</h2>
-    <h3>¿Cual es el motivo de la consulta?</h3>
-    <ul>
-        <li>Respuesta : ${motivoConsulta}</li>
-    </ul>
-    <h3>¿Describe cómo te siente emocionalmente en este momento?</h3>
-    <ul>
-        <li>Respuesta : ${descripcionEmocional}</li>
-    </ul>
-    <h3>Mencione los campos importantes en los hábitos personales que has notado recientemente</h3>
-    <ul>
-        <li>Respuesta : ${habitosPersonales}</li>
-    </ul>
-    <h3>¿Quiere agregar algún comentario adicional?</h3>
-    <ul>
-        <li>Respuesta : ${comentarioAdicional}</li>
-    </ul>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Sexo</th>
+                <th>Edad</th>
+                <th>Email</th>
+                <th>Teléfono Celular</th>
+                <th>Teléfono Fijo</th>
+                <th>País</th>
+                <th>Ciudad</th>
+                <th>Forma de contacto</th>
+                <th>¿Cual es el motivo de la consulta?</th>
+                <th>¿Describe cómo te siente emocionalmente en este momento?</th>
+                <th>Mencione los campos importantes en los hábitos personales que has notado recientemente</th>
+                <th>¿Quiere agregar algún comentario adicional?</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>${nombre}</td>
+            <td>${apellido}</td>
+            <td>${sexo}</td>
+            <td>${edad}</td>
+            <td>${email}</td>
+            <td>${codigoCelular}-${telefonoCelular}</td>
+            <td>${codigoFijo}-${telefonoFijo}</td>
+            <td>${pais}</td>
+            <td>${ciudad}</td>
+            <td>${formaContacto}</td>
+            <td>${motivoConsulta}</td>
+            <td>${descripcionEmocional}</td>
+            <td>${habitosPersonales}</td>
+            <td>${comentarioAdicional}</td>
+        </tr>
+    </table>
     </div>
-        
     `;
 
   const transporter = nodemailer.createTransport({
-    host: process.env.LINEA_ESPERANZA_MAILER_HOST,
-    port: process.env.LINEA_ESPERANZA_MAILER_PORT,
+    host: "SERVICE",
+    port: PORT,
     auth: {
-      user: process.env.LINEA_ESPERANZA_MAILER_USERNAME, // generated ethereal user
-      pass: process.env.LINEA_ESPERANZA_MAILER_PASSWORD, // generated ethereal password
+      user: "USER_MAIL", // generated ethereal user
+      pass: "PASSWORD", // generated ethereal password
     },
     tls: {
       rejectUnauthorized: false,
@@ -172,8 +178,8 @@ pacientesCtrl.sendMail = async (req, res) => {
   });
 
   let mailOptions = {
-    from: process.env.LINEA_ESPERANZA_MAILER_USERNAME_FROM,
-    to: process.env.LINEA_ESPERANZA_MAILER_USERNAME_TO,
+    from: "MAIL_FROM",
+    to: "MAIL_TO",
     subject: "Formulario de paciente - Linea de la Esperanza",
     html: contentHTML,
   };
