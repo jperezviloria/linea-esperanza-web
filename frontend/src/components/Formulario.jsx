@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
 //import Paises from "./Paises";
-import Envio from "./Button";
+
+//------Estos son los componentes que hay que modicicar a la hora de que el proceso sea exitoso o esté en proceso se asistencia técnica------
+//import Envio from "./Button";
+import EnvioError from "./ButtonError"; 
 
 import {
   FormularioBase,
@@ -1039,7 +1042,8 @@ export default class mail extends Component {
             />
           </div>
           <a>
-            <Envio />
+            {/* --------------ESTE ES EL VALOR QUE HAY QUE CAMBIAR PARA QUE SEA EXITOSO EL PROCESO (Envio y EnvioError-----------) */}
+            <EnvioError />
             {/* <FormularioEnviar type="submit">ENVIAR FORMULARIO</FormularioEnviar> */}
           </a>
         </FormularioTabla>
