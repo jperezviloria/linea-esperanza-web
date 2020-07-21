@@ -230,12 +230,17 @@ export const AvisoBase = styled.div`
   width: 50%;
   gap: 5px;
 
+
   img {
     width: 35px;
+    
   }
   p {
     font-size: 12px;
+  
   }
+
+  
 
   @media only screen and (min-width: 310px) {
     img {
@@ -1243,3 +1248,118 @@ export const InfoContacto = styled.div`
     }
   }
 `;
+
+export const RedesSociales = styled.div`
+
+  text-align:center;
+  font-family: "Noto Sans JP", sans-serif;
+  border: 6px solid #127681;
+  border-radius: 65px;
+  width: 85%;
+  margin: 0 auto;
+  
+  
+  
+
+  div{
+    
+      margin: 0 auto;
+      
+      p{
+        font-size:16px;
+        font-weight:900;
+        margin-bottom: 40px;
+
+        &.username:hover{
+          color:#127681;
+        }
+        
+        &.eslogan{
+          font-size: 20px;
+          width:80%;
+          margin: 10px auto;
+          font-weight:900;
+    }
+      }
+      img{
+        width:60px;
+        
+        
+      }
+
+      div{
+          display:grid;
+          grid-template-columns: repeat(2, 40%);
+          justify-content: center;
+          margin: 0 auto;
+          
+          align-content: center;
+          margin-top:20px;
+
+      }
+      
+    }
+
+
+  @media only screen and (min-width:480px){
+    
+    div{
+    
+      p{
+        font-size:25px;
+      }
+    
+    img{
+        width:90px;
+      }
+
+    }
+  }
+
+  @media only screen and (min-width:768px){
+    width:91%;
+  
+  div{
+    
+    p{
+      font-size:25px;
+      font-weight:900;
+      margin-bottom: 40px;
+      
+      &.eslogan{
+        font-size: 30px;
+        width:80%;
+        margin: 40px auto;
+        font-weight:900;
+  }
+    }
+  
+  img{
+      width:120px;
+    }
+
+  }
+  }
+
+  @media only screen and (min-width:1024px){
+    
+    div{
+
+      p{
+      font-size:25px;
+      font-weight:900;
+      margin-bottom: 40px;
+      
+      &.eslogan{
+        font-size: 35px;
+        width:80%;
+        margin: 40px auto;
+        font-weight:900;
+      }}
+      img{
+        width: 200px;
+      }
+    }
+  }
+  
+`

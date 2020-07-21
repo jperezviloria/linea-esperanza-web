@@ -23,6 +23,9 @@ const sideDrawer = props => {
           <a href="/nosotros">Sobre nosotros</a>
         </li>
         <li>
+          <a href="http://www.lineaesperanza.wordpress.com" target="_blank" rel="noopener noreferrer">Blog</a>
+        </li>
+        <li>
           <a href="/contacto">Contáctanos</a>
         </li>
       </ul>
