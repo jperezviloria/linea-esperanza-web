@@ -19,6 +19,7 @@ const sideDrawer = props => {
         <li>
           <a href="/equipo">Nuestro equipo</a>
         </li>
+        <li><a href="https://www.paypal.me/NorbeyRodriguez" target="_blank" rel="noopener noreferrer">DONACIONES</a></li>
         <li>
           <a href="/nosotros">Sobre nosotros</a>
         </li>

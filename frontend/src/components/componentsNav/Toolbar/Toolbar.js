@@ -15,6 +15,7 @@ const toolbar = props => (
         <ul>
           <li><a href="/">INICIO</a></li>
           <li><a href="/equipo">NUESTRO EQUIPO</a></li>
+          <li><a href="https://www.paypal.me/NorbeyRodriguez" target="_blank" rel="noopener noreferrer">DONACIONES</a></li>
           <li><a href="/nosotros">SOBRE NOSOTROS</a></li>
           <li><a href="http://www.lineaesperanza.wordpress.com" target="_blank" rel="noopener noreferrer">BLOG</a></li>
           <li><a href="/contacto">CONTÁCTANOS</a></li>
